@@ -42,3 +42,9 @@ boxItems.forEach((item) => {
       showItem(index);
     });
 });
+
+
+
+setInterval(() => {
+    btnRight.click()
+}, 3000)
