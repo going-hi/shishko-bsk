@@ -48,6 +48,7 @@ body {
 .main__title {
     font-size: 46px;
     font-weight: 700;
+    font-family: "Russo One", sans-serif;
 }
 
 .main__description {
@@ -177,8 +178,9 @@ body {
 .park__title {
     text-align: center;
     padding-top: 88px;
-    font-weight: 600;
+    font-weight: 400;
     font-size: 36px;
+    font-family: "Russo One", sans-serif;
 }
 
 .park__items {
