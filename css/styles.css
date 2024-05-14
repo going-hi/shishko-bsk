@@ -766,6 +766,7 @@ body {
         text-align: center;
         padding: 80px 0 200px;
     }
+
     .slider__box {
         width: 10px;
         height: 10px;
@@ -816,4 +817,136 @@ body {
         font-size: 14px;
         padding-top: 0;
     }
+}
+
+
+
+/* * for modal */
+
+.vmodal {}
+
+.vmodal.open .modal-overlay,
+.vmodal.open .modal-window {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.vmodal.hide .modal-overlay,
+.vmodal.hide .modal-window {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.vmodal.open .modal-window {
+    transform: translateY(100px);
+}
+
+.vmodal.open .modal-overlay {
+    background: rgba(0, 0, 0, .5);
+}
+
+.vmodal.hide .modal-window {
+    transform: translateY(-200px);
+}
+
+.vmodal.hide .modal-overlay {
+    background: rgba(0, 0, 0, 0);
+}
+
+.modal-window,
+.modal-overlay {
+    opacity: 0;
+    z-index: -1;
+   
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: rgba(0, 0, 0, 0);
+   
+    transition: background .2s ease-in;
+}
+
+.modal-window {
+    color: #000;
+    /* width: 600px; */
+    padding: 10px;
+    overflow-y: scroll;
+    border-radius: 5px;
+    background: #fff;
+    margin: 0 auto;
+    transform: translateY(-200px);
+    transition: transform .2s ease-in;
+}
+
+.modal-header {
+    padding: 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+}
+
+
+.modal-title {
+    font-size: 1.5rem;
+}
+
+.modal-close {
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 10px;
+    overflow: scroll;
+}
+
+.modal-body p {
+    margin: 0 0 5px;
+    
+}
+
+.modal-footer {
+    padding: 5px 10px;
+    border-top: 1px solid #eee;
+}
+
+
+/* * content */
+.modal__content {
+    padding: 20px;
+    width: 1000px;
+    border: 1px solid #000;
+    margin: 0 auto;
+}
+
+.modal__item {
+    display: flex;
+    margin-bottom: 3%;
+}
+
+
+
+.modal__item__photo {
+    margin: 0 20px;
+    width: 50%;
+}
+
+.modal__item__photo>img {
+    border-radius: 20px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.modal__item__content {
+    color: #000;
+    width: 50%;
+    padding: 20px 0;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 600;
 }
