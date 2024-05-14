@@ -1,5 +1,4 @@
 const content = `
-
       <div class="modal__item">
         <div class="modal__item__photo">
           <img src="./img/modal/1.png" alt="" />
@@ -112,11 +111,60 @@ const content = `
           волнообразными подъёмами и спусками относительно центра карусели.
           Продолжительность цикла катания 3 минуты.
         </div>
+        </div>
+        <div class="modal__item">
+        <div class="modal__item__photo">
+          <img src="./img/modal/9.png" alt="" />
+        </div>
+
+        <div class="modal__item__content">
+            График работы:
+            Понедельник - Выходной
+            <br>
+            Вторник - 10:00 – 20:00
+            <br>
+            Среда - 10:00 – 20:00
+            <br>
+            Четверг - 10:00 – 20:00
+            <br>
+            Пятница - 10:00 – 20:00
+            <br>
+            Суббота - 10:00 – 20:00
+            <br>
+            Воскресенье - 10:00 – 20:00
+            <br>
+            Адрес - Народная ул., 13, Борисоглебск
+        </div>
       </div>
 `;
 
+const iceContent = `
+    <div>
+        22 февраля 2024 года состоялось знаменательное событие в культурной жизни нашего города — торжественное открытие ледовой арены «Айсберг».
+    </div>
+    <br>
+    <div>
+        В сообществе публикуют расписания массовых катаний и режима работы, чтобы каждый желающий 
+        мог насладиться катанием на льду в удобное время. 
+        В расписании работы ледовой арены «Айсберг», кроме времени, отведенного для массовых катаний, 
+        появился новый вид совместного активного 
+        отдыха для больших и маленьких любителей спорта — «Час семейного хоккея». Арена продолжает активно поддерживать 
+        благотворительные инициативы. Там постоянно 
+        проводятся благотворительные товарищеские встречи между хоккейными командами из разных городов. 
+        Цена входного билета — 50 рублей.Все собранные от продажи билетов на данный хоккейный матч денежные средства, 
+        будут переданы волонтерам «Клуба бокса ВДВ» и пойдут на закупку предметов первой необходимости для тех, 
+        кто сегодня не щадит своих жизней, защищая нашу Родину! 
+    </div>
+    <br> <br>
+    <div class="modal__imgs">
+        <img src="./img/modal/9.png">
+        <img src="./img/modal/10.png">
+        <img src="./img/modal/11.png">
+    </div>
+`;
+
 const parkModal = $.modal({
-  title: "Цена на Товар",
+  title: "Городской парк культуры и отдыха",
   closable: true,
   width: "1000px",
   content,
@@ -125,10 +173,46 @@ const parkModal = $.modal({
       text: "Закрыть",
       type: "primary",
       handler() {
-        priceModal.close();
+        parkModal.close();
       },
     },
   ],
 });
 
-parkModal.open();
+const parkButton = document.getElementById("parkButton");
+
+parkButton.addEventListener("click", () => {
+  parkModal.open();
+});
+
+const iceModal = $.modal({
+  title: "Ледовая арена «Айсберг»",
+  closable: true,
+  width: "1000px",
+  content: iceContent,
+  footerButtons: [
+    {
+      text: "Закрыть",
+      type: "primary",
+      handler() {
+        iceModal.close();
+      },
+    },
+  ],
+});
+
+const iceButton = document.getElementById("iceButton");
+
+iceButton.addEventListener("click", () => {
+
+  iceModal.open();
+});
+
+const mainButton = document.getElementById("mainButton");
+
+mainButton.addEventListener("click", (event) => {
+    event.preventDefault()
+  document
+    .querySelector(`[data-section = 'main']`)
+    .scrollIntoView({ behavior: "smooth" });
+});

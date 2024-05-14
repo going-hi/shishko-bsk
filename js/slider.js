@@ -3,8 +3,6 @@ const btnLeft = document.getElementById("sliderLeft");
 const btnRight = document.getElementById("sliderRight");
 const boxes = document.getElementById("boxs");
 
-console.log(btnLeft, "f");
-
 items.forEach((_, index) => {
   const node = document.createElement("div");
   node.classList.add("slider__box");
@@ -35,16 +33,13 @@ function showItem(index) {
   });
 }
 
-
 boxItems.forEach((item) => {
-    item.addEventListener("click", () => {
-      let index = parseInt(item.dataset.index);
-      showItem(index);
-    });
+  item.addEventListener("click", () => {
+    let index = parseInt(item.dataset.index);
+    showItem(index);
+  });
 });
 
-
-
 setInterval(() => {
-    btnRight.click()
-}, 3000)
+  btnRight.click();
+}, 3000);
