@@ -517,6 +517,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: 20px;
 }
 
 .modal__imgs > img {
@@ -524,6 +525,25 @@ body {
     width: 32%;
     height: auto;
 }
+
+.modal__img  {
+    border-radius: 20px;
+
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.modal-qr {
+    text-align: center;
+}
+
+.modal-qr > img {
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+} 
 
 /* * Адаптив */
 
@@ -941,7 +961,9 @@ body {
         height: 10px;
     }
 
-    
+    .modal-qr > img {
+        width: 100%;
+    } 
 
 }
 

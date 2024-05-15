@@ -157,9 +157,18 @@ const iceContent = `
     </div>
     <br> <br>
     <div class="modal__imgs">
-        <img src="./img/modal/9.png">
+        <img src="./img/modal/12.png">
         <img src="./img/modal/10.png">
         <img src="./img/modal/11.png">
+    </div> 
+
+      <img class="modal__img" src="./img/modal/14.png">
+      <img class="modal__img" src="./img/modal/15.png">
+
+
+    <div class="modal-qr">
+      <img src="./img/modal/16.png">
+      <span>ВК - Ледовая арена "АЙСБЕРГ" г. Борисоглебск</span>
     </div>
 `;
 
